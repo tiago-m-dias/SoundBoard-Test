@@ -102,6 +102,7 @@
         const keys = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener("transitionend", removeClass));
         keys.forEach(key => key.addEventListener("click", playForKey));
+        keys.forEach(key => key.addEventListener("touchstart", playForKey));
         window.addEventListener('keydown', playForKey);
     </script>
 
