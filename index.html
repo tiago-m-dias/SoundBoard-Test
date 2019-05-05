@@ -100,7 +100,7 @@
 
         const keys = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener("transitionend", removeClass));
-        window.addEventListener('keydown', playForKey)
+        window.addEventListener('keyup', playForKey)
     </script>
 
 
