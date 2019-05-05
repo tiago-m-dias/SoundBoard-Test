@@ -81,9 +81,10 @@
 
     <script>
         function playForKey(e) {
-            // alert("key pressed");
-            //console.log(e);
+            console.log(e.path[1].dataset.key);
             console.log(e.keyCode);
+
+            if (!e.keyCode) e.keyCode = e.path[1].dataset.key;
 
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"`);
             if (!audio) return;
@@ -100,7 +101,8 @@
 
         const keys = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener("transitionend", removeClass));
-        window.addEventListener('keyup', playForKey)
+        keys.forEach(key => key.addEventListener("click", playForKey));
+        window.addEventListener('keydown', playForKey);
     </script>
 
 
