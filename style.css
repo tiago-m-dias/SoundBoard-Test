@@ -16,6 +16,7 @@ html {
     flex: 1;
     flex-wrap: wrap;
     min-height: 100vh;
+    max-width: 80vw;
     align-items: center;
     justify-content: center;
 }
