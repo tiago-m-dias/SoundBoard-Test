@@ -86,8 +86,10 @@
 
     <script>
         function playForKey(e) {
-            console.log(e.path[1].dataset.key);
-            console.log(e.keyCode);
+            //console.log(e.path);
+            //path[1] is div.key index
+            // console.log(e.path[1].dataset.key);
+            // console.log(e.keyCode);
 
             if (!e.keyCode) e.keyCode = e.path[1].dataset.key;
 
